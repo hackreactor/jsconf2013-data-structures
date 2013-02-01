@@ -5,7 +5,7 @@ describe("stack", function() {
     stack = makeStack();
   });
 
-  it("should have a method named 'add'", function() {
+  it('should have "add", "remove", and "size" methods', function() {
     expect(stack.add).toEqual(jasmine.any(Function));
     expect(stack.remove).toEqual(jasmine.any(Function));
     expect(stack.size).toEqual(jasmine.any(Function));
