@@ -1,13 +1,10 @@
-// Note: don't use javascript's native array functions to do this.
 var makeQueue = function(){
   var queue = {};
-
-  var storage = {};
+  var storage = {}; // You'll use an object with numeric keys to store queue
+                    // elements, since using an Array would defeat the purpose.
   var size;
 
-
   // fill out these methods
-
   queue.add = function(){
   };
 
