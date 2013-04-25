@@ -1,7 +1,4 @@
 var makeStack = function(){
-  // Store methods for this module as properties of the methods object
-  var methods = {};
-
   // Use an object with numeric keys to store values
   // Hey! It's cheating to use an array
   var storage = {};
@@ -10,14 +7,17 @@ var makeStack = function(){
   var size;
 
   // Implement these methods
-  methods.add = function(value){
+  var stack = {
+    add:  function(value){
+
+    },
+    remove: function(){
+
+    },
+    size: function(){
+
+    }
   };
 
-  methods.remove = function(){
-  };
-
-  methods.size = function(){
-  };
-
-  return methods;
+  return stack;
 };
