@@ -1,18 +1,23 @@
-var makeStack = function(){
-  var result = {};
-  var storage = {}; // You'll use an object with numeric keys to store queue
-                    // elements, since using an Array would defeat the purpose.
+var Stack = function(){
+  // Store methods for this module as properties of the methods object
+  var methods = {};
+
+  // Use an object with numeric keys to store values
+  // Hey! It's cheating to use an array
+  var storage = {};
+
+  // Hint: size is important
   var size;
 
-  // fill out these methods
-  result.add = function(){
+  // Implement these methods
+  methods.add = function(value){
   };
 
-  result.remove = function(){
+  methods.remove = function(){
   };
 
-  result.size = function(){
+  methods.size = function(){
   };
 
-  return result;
+  return methods;
 };
