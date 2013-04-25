@@ -3,7 +3,7 @@ describe("queue", function() {
 
   // Before each test runs, create a new Queue
   beforeEach(function() {
-    queue = Queue();
+    queue = makeQueue();
   });
 
   // Any queue implementation should have the following methods

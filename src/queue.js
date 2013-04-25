@@ -1,4 +1,4 @@
-var Queue = function(){
+var makeQueue = function(){
   // Store methods for this module as properties of the methods object
   var methods = {};
 

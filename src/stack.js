@@ -1,4 +1,4 @@
-var Stack = function(){
+var makeStack = function(){
   // Store methods for this module as properties of the methods object
   var methods = {};
 

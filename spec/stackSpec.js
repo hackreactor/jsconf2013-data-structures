@@ -3,7 +3,7 @@ describe("stack", function() {
 
   // Before each test runs, create a new Stack
   beforeEach(function() {
-    stack = Stack();
+    stack = makeStack();
   });
 
   // Any stack implementation should have the following methods
