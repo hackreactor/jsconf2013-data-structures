@@ -3,14 +3,20 @@ describe("stack", function() {
 
   // Before each test runs, create a new Stack
   beforeEach(function() {
-    stack = makeStack();
+    if (runner.is('src/functional') || runner.is('src/functional-shared')) {
+      stack = makeStack();
+    } else if (runner.is('src/prototypal')) {
+      stack = Stack();
+    } else if (runner.is('src/pseudoclassical')) {
+      stack = new Stack();
+    }
   });
 
   // Any stack implementation should have the following methods
   it('should have "add", "remove", and "size" methods', function() {
-    expect(stack.add).toEqual(jasmine.any(Function));
-    expect(stack.remove).toEqual(jasmine.any(Function));
-    expect(stack.size).toEqual(jasmine.any(Function));
+    expect(stack.add).to.be.a('function');
+    expect(stack.remove).to.be.a('function');
+    expect(stack.size).to.be.a('function');
   });
 
   // Organize your tests with nested describe() statements
@@ -18,7 +24,7 @@ describe("stack", function() {
   describe('#add()', function() {
     it('should take one argument', function() {
       // Make sure add() takes a single argument using (see http://mdn.io/Function.length)
-      expect(stack.add.length).toEqual(1);
+      expect(stack.add.length).to.equal(1);
     });
   });
 

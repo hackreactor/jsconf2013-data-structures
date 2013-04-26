@@ -1,45 +1,38 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
-  "http://www.w3.org/TR/html4/loose.dtd">
-<html>
+<!doctype html>
+<meta charset="utf8">
 <head>
-  <title>Jasmine Test Runner</title>
-  <link rel="stylesheet" type="text/css" href="lib/jasmine-1.0.0/jasmine.css">
-  <script type="text/javascript" src="lib/jasmine-1.0.0/jasmine.js"></script>
-  <script type="text/javascript" src="lib/jasmine-1.0.0/jasmine-html.js"></script>
+	<link rel="stylesheet" href="lib/mocha/mocha.css">
+	<link rel="stylesheet" href="lib/runner/runner.css">
+	<script src="lib/mocha/mocha.js"></script>
+	<script src="lib/chai/chai.js"></script>
+	<script src="lib/runner/runner.js"></script>
 
-  <!-- source files -->
-  <script type="text/javascript" src="src/stack.js"></script>
-  <script type="text/javascript" src="src/queue.js"></script>
+	<script type="text/javascript">
+		// Setup mocha
+		mocha.setup('bdd');
 
-  <!-- refactored source files -->
-  <!-- (these start off empty; ignore until you're done with the above) -->
-  <script type="text/javascript" src="src/stack-refactors/step2.js"></script>
-  <script type="text/javascript" src="src/stack-refactors/step3.js"></script>
-  <script type="text/javascript" src="src/stack-refactors/step4.js"></script>
-  <script type="text/javascript" src="src/queue-refactors/step2.js"></script>
-  <script type="text/javascript" src="src/queue-refactors/step3.js"></script>
-  <script type="text/javascript" src="src/queue-refactors/step4.js"></script>
+		// Expose chai's expect method
+		var expect = chai.expect;
 
-  <!-- spec files -->
-  <!-- (you can comment out any you're not working on) -->
-  <script type="text/javascript" src="spec/stackSpec.js"></script>
-  <script type="text/javascript" src="spec/queueSpec.js"></script>
+		runner.variations = {
+			'src/functional': 'Functional',
+			'src/functional-shared': 'Functional (shared)',
+			'src/prototypal': 'Prototypal',
+			'src/pseudoclassical': 'Pseudoclassical'
+		};
 
-  <!-- refactored spec files -->
-  <!-- (these start off empty; ignore until you're done with the above) -->
-  <script type="text/javascript" src="spec/stack-refactors/step2.js"></script>
-  <script type="text/javascript" src="spec/stack-refactors/step3.js"></script>
-  <script type="text/javascript" src="spec/stack-refactors/step4.js"></script>
-  <script type="text/javascript" src="spec/queue-refactors/step2.js"></script>
-  <script type="text/javascript" src="spec/queue-refactors/step3.js"></script>
-  <script type="text/javascript" src="spec/queue-refactors/step4.js"></script>
+		runner.scripts = [
+			'queue.js',
+			'stack.js'
+		];
+
+		runner.specs = [
+			'spec/stackSpec.js',
+			'spec/queueSpec.js'
+		];
+	</script>
 </head>
-<body>
 
-<script type="text/javascript">
-  jasmine.getEnv().addReporter(new jasmine.TrivialReporter());
-  jasmine.getEnv().execute();
-</script>
+<div id="mocha">
+</div>
 
-</body>
-</html>

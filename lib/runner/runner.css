@@ -1,0 +1,10 @@
+#runner {
+	position: absolute;
+	top: 16px;
+	left: 16px;
+}
+
+#runner label {
+	font-weight: bold;
+	font-size: 14px;
+}

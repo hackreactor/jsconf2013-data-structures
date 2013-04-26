@@ -3,14 +3,20 @@ describe("queue", function() {
 
   // Before each test runs, create a new Queue
   beforeEach(function() {
-    queue = makeQueue();
+    if (runner.is('src/functional') || runner.is('src/functional-shared')) {
+      queue = makeQueue();
+    } else if (runner.is('src/prototypal')) {
+      queue = Queue();
+    } else if (runner.is('src/pseudoclassical')) {
+      queue = new Queue();
+    }
   });
 
   // Any queue implementation should have the following methods
   it('should have "add", "remove", and "size" methods', function() {
-    expect(queue.add).toEqual(jasmine.any(Function));
-    expect(queue.remove).toEqual(jasmine.any(Function));
-    expect(queue.size).toEqual(jasmine.any(Function));
+    expect(queue.add).to.be.a('function');
+    expect(queue.remove).to.be.a('function');
+    expect(queue.size).to.be.a('function');
   });
 
   // Organize your tests with nested describe() statements
@@ -18,7 +24,7 @@ describe("queue", function() {
   describe('#add()', function() {
     it('should take one argument', function() {
       // Make sure add() takes a single argument using (see http://mdn.io/Function.length)
-      expect(queue.add.length).toEqual(1);
+      expect(queue.add.length).to.equal(1);
     });
   });
 
