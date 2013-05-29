@@ -1,5 +1,3 @@
-# Data Structures
-
 In this assignment, we'll implement and test two basic data structures:
 
 ## Requirements
@@ -9,15 +7,10 @@ In this assignment, we'll implement and test two basic data structures:
 ## Tasks
 
 - [ ] **Run the (mostly empty) test suite**
-    - This repo contains a mostly empty [Jasmine] test suite.  To run it, open up `SpecRunner.html`.
-
-- [ ] **Implement and test a [stack] data structure with the following methods:**
-    - [ ] `push(string)` - Add a string to the top of the stack
-    - [ ] `pop()` - Remove and return the string on the top of the stack
-    - [ ] `size()` - Return the number of items on the stack
+    - This repo contains a mostly empty Mocha test suite.  To run it, open up `SpecRunner.html`.
 
 - [ ] **Refactor your data structures to use the following methods of instantiation:**
-    1. [x] **Functional instantiation**: a simple "maker" pattern
+    1. [x] **Functional instantiation**: a simple "maker" pattern (This is already done!)
         - *Do:*
             - Work within the `src/functional/` folder.
             - Define all functions and properties within the maker function.
@@ -68,7 +61,6 @@ In this assignment, we'll implement and test two basic data structures:
 [Array methods]: http://mdn.io/Array#Methods_of_Array_instances
 [Object.create]: http://mdn.io/Object.create
 [_.extend]: http://underscorejs.org/#extend
-[Jasmine]: http://pivotal.github.com/jasmine/
 [Chrome profiling tools]: https://developers.google.com/chrome-developer-tools/docs/profiles
 
 
