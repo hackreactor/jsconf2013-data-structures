@@ -26,7 +26,19 @@ describe("stack", function() {
       // Make sure add() takes a single argument using (see http://mdn.io/Function.length)
       expect(stack.add.length).to.equal(1);
     });
+    it('should add something to the stack', function() {
+      expect(stack.size()).to.equal(0);
+      stack.add('element');
+      expect(stack.size()).to.equal(1);
+    });
   });
 
-  // Hey! Add more tests here to test the functionality of stack
+  describe('#remove()', function() {
+    it('should remove an element', function() {
+      stack.add('element');
+      stack.remove();
+      expect(stack.size()).to.equal(0);
+    });
+  });
+
 });
