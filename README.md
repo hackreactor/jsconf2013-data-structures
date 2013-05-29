@@ -3,7 +3,7 @@
 In this assignment, we'll implement and test two basic data structures:
 
 ## Requirements
-- Implement a **stack** class and a **queue** class
+- Implement a **stack** class
 - Throughly test the functionality of your data structures.
 
 ## Tasks
@@ -16,11 +16,6 @@ In this assignment, we'll implement and test two basic data structures:
     - [ ] `pop()` - Remove and return the string on the top of the stack
     - [ ] `size()` - Return the number of items on the stack
 
-- [ ] **Implement and test a [queue] data structure with the following methods:**
-    - [ ] `enqueue(string)` - Add a string to the back of the queue
-    - [ ] `dequeue()` - Remove and return the string at the front of the queue
-    - [ ] `size()` - Return the number of items in the queue
-
 - [ ] **Refactor your data structures to use the following methods of instantiation:**
     1. [x] **Functional instantiation**: a simple "maker" pattern
         - *Do:*
@@ -29,7 +24,7 @@ In this assignment, we'll implement and test two basic data structures:
         - *Don't:*
             - Use the keyword `new`, the keyword `this`, or any `prototype` chains.
             - Capitalize the maker function name.
-        - *Example*: The provided classes `makeStack` and `makeQueue` already follow this pattern
+        - *Example*: The provided class `makeStack` already follow this pattern
     2. [ ] **Functional instantiation with shared methods**: same as step 1, but with shared methods
         - *Do:*
             - Work within the `src/functional-shared/` folder.
@@ -60,7 +55,7 @@ In this assignment, we'll implement and test two basic data structures:
 ## Extra credit
 
 - [ ] **Use the [Chrome profiling tools] to compare the performance of each instantiation pattern.**
-  - [ ] Create a profiling test case in each of your test suites.  It should instantiate and use a large number of stacks and queues.
+  - [ ] Create a profiling test case in each of your test suites.  It should instantiate and use a large number of stacks.
   - [ ] Comment out all but one test suite.  Record the results of the profiler.  Repeat for each step of the refactor.
   - [ ] Write a brief analysis of your results.
 
@@ -68,10 +63,7 @@ In this assignment, we'll implement and test two basic data structures:
 [prototypal instantiation example]: https://github.com/hackreactor/giraffeMaker/blob/master/src/giraffePrototype.js
 [pseudoclassical instantiation example]: https://github.com/hackreactor/giraffeMaker/blob/master/src/giraffePseudoClassical.js
 
-[stack image]: http://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Data_stack.svg/200px-Data_stack.svg.png
-[queue image]: http://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Data_Queue.svg/200px-Data_Queue.svg.png
 [stack]: http://en.wikipedia.org/wiki/Stack_(abstract_data_type)
-[queue]: http://en.wikipedia.org/wiki/Queue_(abstract_data_type)
 [Array]: http://mdn.io/Array
 [Array methods]: http://mdn.io/Array#Methods_of_Array_instances
 [Object.create]: http://mdn.io/Object.create
