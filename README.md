@@ -1,15 +1,15 @@
-In this assignment, we'll implement and test two basic data structures:
+In this assignment, we'll implement and test a stack:
 
 ## Requirements
 - Implement a **stack** class
-- Throughly test the functionality of your data structures.
+- Throughly test the functionality of your stack.
 
 ## Tasks
 
 - [ ] **Run the (mostly empty) test suite**
     - This repo contains a mostly empty Mocha test suite.  To run it, open up `SpecRunner.html`.
 
-- [ ] **Refactor your data structures to use the following methods of instantiation:**
+- [ ] **Refactor your stack to use the following methods of instantiation:**
     1. [x] **Functional instantiation**: a simple "maker" pattern (This is already done!)
         - *Do:*
             - Work within the `src/functional/` folder.
