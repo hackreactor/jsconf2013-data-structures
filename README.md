@@ -17,7 +17,7 @@ In this assignment, we'll implement and test a stack:
         - *Don't:*
             - Use the keyword `new`, the keyword `this`, or any `prototype` chains.
             - Capitalize the maker function name.
-        - *Example*: The provided class `makeStack` already follow this pattern
+        - *Example*: The provided class `makeStack` already follows this pattern
     2. [ ] **Functional instantiation with shared methods**: same as step 1, but with shared methods
         - *Do:*
             - Work within the `src/functional-shared/` folder.
